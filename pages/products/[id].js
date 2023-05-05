@@ -34,7 +34,7 @@ import styles from '../../styles/Home.module.css'
 // SSRの場合
 export async function getServerSideProps({ params }) {
   console.log(`http://localhost:3000/${params.id}.json`);
-  const req = await fetch(`http://localhost:3000/${params.id}.json`);
+  const req = await fetch(`https://nextjs-practice-gold-three.vercel.app/${params.id}.json`);
   const data = await req.json();
 
   return {
